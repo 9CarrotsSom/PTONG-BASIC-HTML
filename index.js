@@ -3,7 +3,7 @@ console.log("Hello SBTVC888");
 var studentsAll = [
     {
         nickName: "ณณฑ์",
-        age: "undifined",
+        age: "123346587984698546984694646465846",
         birthday: "31 ก.ย. 2549",
         note: "ความสามารถพิเศษคือ ลืมเเล้ว ลืมอยู่ ลืมต่อ",
         prefix: "ณายแภฑญ์",
