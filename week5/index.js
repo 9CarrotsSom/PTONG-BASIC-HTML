@@ -9,7 +9,7 @@ var studentsAll = [
         prefix: "ณายแภฑญ์",
         firstName: "ฆณกฬ",
         lastName: "ไฑญปฬะโฆณ",
-        imageProfile: "../img/non.jpg", // "./img/ชื่อภาพ"
+        imageProfile: "./img/non.jpg", // "./img/ชื่อภาพ"
         url: "https://www.youtube.com/watch?v=xvFZjo5PgG0",
         researchInteresting: [
             {
@@ -26,7 +26,7 @@ var studentsAll = [
         prefix: "นรายเเพรทยย์",
         firstName: "พัดสะดุสาน",
         lastName: "พุดทิกอน",
-        imageProfile: "../img/kao.jpg",
+        imageProfile: "./img/kao.jpg",
         url: "https://www.youtube.com/watch?v=xvFZjo5PgG0",
         researchInteresting: [
             {
@@ -43,7 +43,7 @@ var studentsAll = [
         prefix: "นรายเเพรทยย์",
         firstName: "ทะนานบ",
         lastName: "ยดถาสัก",
-        imageProfile: "../img/nop.jpg",
+        imageProfile: "./img/nop.jpg",
         url: "https://www.youtube.com/watch?v=xvFZjo5PgG0",
         researchInteresting: [
             {
@@ -60,7 +60,7 @@ var studentsAll = [
         prefix: "นรายเเพรทยย์",
         firstName: "ยดสะกอน",
         lastName: "อังคะนาวิน",
-        imageProfile: "../img/chi.jpg",
+        imageProfile: "./img/chi.jpg",
         url: "https://www.youtube.com/watch?v=xvFZjo5PgG0",
         researchInteresting: [
             {
@@ -77,7 +77,7 @@ var studentsAll = [
         prefix: "นรางเเพรทยย์",
         firstName: "พัดชะระพน",
         lastName: "เเสงอุสา",
-        imageProfile: "../img/pao.jpg",
+        imageProfile: "./img/pao.jpg",
         url: "https://www.youtube.com/watch?v=xvFZjo5PgG0",
         researchInteresting: [
             {
@@ -94,7 +94,7 @@ var studentsAll = [
         prefix: "นรางเเพรทยย์",
         firstName: "เฉลิมพร",
         lastName: "สุริยะ",
-        imageProfile: "../img/pai.jpg",
+        imageProfile: "./img/pai.jpg",
         url: "https://www.youtube.com/watch?v=xvFZjo5PgG0",
         researchInteresting: [
             {
@@ -111,7 +111,7 @@ var studentsAll = [
         prefix: "นรางเเพรทยย์",
         firstName: "ปะพาพอน",
         lastName: "พูผาลี",
-        imageProfile: "../img/cake.jpg",
+        imageProfile: "./img/cake.jpg",
         url: "https://www.youtube.com/watch?v=xvFZjo5PgG0",
         researchInteresting: [
             {
@@ -128,7 +128,7 @@ var studentsAll = [
         prefix: "นรางเเพรทยย์",
         firstName: "ละพัดสะละดา",
         lastName: "ชายยะจาก",
-        imageProfile: "../img/chompoo.jpg",
+        imageProfile: "./img/chompoo.jpg",
         url: "https://www.youtube.com/watch?v=xvFZjo5PgG0",
         researchInteresting: [
             {
@@ -145,7 +145,7 @@ var studentsAll = [
         prefix: "นายวิศวะคอมพิวเตอร์กิ๊กก๊อก",
         firstName: "จะตุรน",
         lastName: "นิยะรัด",
-        imageProfile: "../img/p-tong.jpg",
+        imageProfile: "./img/p-tong.jpg",
         url: "https://www.youtube.com/watch?v=xvFZjo5PgG0",
         researchInteresting: [
             {
