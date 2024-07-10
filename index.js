@@ -157,28 +157,68 @@ var studentsAll = [
 ];
 
 
-console.log(studentsAll);
+
 
 
 // document.getElementById("").innerHTML = "";
 
 var textList = "";
 
-for(let i = 0; i < studentsAll.length; i++){
-    let researchTextList = "";
-    for(let ii = 0; ii < studentsAll[i].researchInteresting.length; ii++){
-        researchTextList += `<p>${studentsAll[i].researchInteresting[ii].topic}</p>
-        <iframe width="560" height="315" src="${studentsAll[i].researchInteresting[ii].url}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
+function renderData(){
+    for(let i = 0; i < studentsAll.length; i++){
+        let researchTextList = "";
+        for(let ii = 0; ii < studentsAll[i].researchInteresting.length; ii++){
+            researchTextList += `<p>${studentsAll[i].researchInteresting[ii].topic}</p>
+            <iframe width="560" height="315" src="${studentsAll[i].researchInteresting[ii].url}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
+        }
+        textList += `
+            <h3>Doctor ${studentsAll[i].prefix} ${studentsAll[i].firstName} ${studentsAll[i].lastName} (${studentsAll[i].nickName}) </h3>
+            <p>ประวัติ Doctor ${studentsAll[i].nickName} : อายุ ${studentsAll[i].age} ${studentsAll[i].note}</p>
+            <img src="${studentsAll[i].imageProfile}" alt="${studentsAll[i].imageProfile}lnwza" width="20%" style="border-radius: 50px; border-color: black; border-style: solid;">
+            <a href="${studentsAll[i].url}" target="_blank">
+                <p>เพลงโดนจัย</p>
+            </a>
+            ${researchTextList}
+        `;
     }
-    textList += `
-        <h3>Doctor ${studentsAll[i].prefix} ${studentsAll[i].firstName} ${studentsAll[i].lastName} (${studentsAll[i].nickName}) </h3>
-        <p>ประวัติ Doctor ${studentsAll[i].nickName} : อายุ ${studentsAll[i].age} ${studentsAll[i].note}</p>
-        <img src="${studentsAll[i].imageProfile}" alt="${studentsAll[i].imageProfile}lnwza" width="20%" style="border-radius: 50px; border-color: black; border-style: solid;">
-        <a href="${studentsAll[i].url}" target="_blank">
-            <p>เพลงโดนจัย</p>
-        </a>
-        ${researchTextList}
-    `;
+    document.getElementById("dataDoctor").innerHTML = textList;
+    console.log(studentsAll);
 }
 
-document.getElementById("dataDoctor").innerHTML = textList;
+
+renderData();
+const buttonAdd = document.getElementById("add-btn");
+buttonAdd.addEventListener("click", () =>{
+    const inputNickname = document.getElementById("nickname").value;
+    const inputAge = document.getElementById("age").value;
+    const inputBirthDay = document.getElementById("birthday").value;
+    const inputNote = document.getElementById("note").value;
+    const inputPrefix = document.getElementById("prefix").value;
+    const inputFirstname = document.getElementById("firstname").value;
+    const inputLastname = document.getElementById("lastname").value;
+    const inputUrlImageProfile = document.getElementById("urlimageprofile").value;
+    const inputUrlMusic = document.getElementById("urlmusic").value;
+    const inputResearchName = document.getElementById("researchname").value;
+    const researchUrl = document.getElementById("researchurl").value;
+    
+    const newValue = {
+        nickName: inputNickname,
+        age: inputAge,
+        birthday: inputBirthDay,
+        note: inputNote,
+        prefix: inputPrefix,
+        firstName: inputFirstname,
+        lastName: inputLastname,
+        imageProfile: inputUrlImageProfile,
+        url: inputUrlMusic,
+        researchInteresting: [
+            {
+                topic: inputResearchName,
+                url: researchUrl
+            },
+        ]
+    }
+
+    studentsAll.push(newValue);
+    renderData();
+});
